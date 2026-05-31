@@ -84,7 +84,7 @@ export function getMessageText(msg: WAMessage): string {
 }
 
 // ── Dynamic menu builder ──────────────────────────────────────────────────────
-const MENU_IMAGE_URL = "https://files.catbox.moe/hfnyr6.mp4";
+const MENU_VIDEO_URL = "https://files.catbox.moe/hfnyr6.mp4";
 
 function buildMenu(senderName: string, chatJid: string): string {
   const now = new Date();
@@ -229,7 +229,7 @@ export async function handleCommand(
       case "help":
       case "start":
         await sock.sendMessage(jid, {
-          image: { url: MENU_IMAGE_URL },
+          video: { url: MENU_VIDEO_URL },
           caption: buildMenu(senderName, jid),
         } as any, { quoted: msg });
         break;
