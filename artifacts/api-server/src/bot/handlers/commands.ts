@@ -84,7 +84,7 @@ export function getMessageText(msg: WAMessage): string {
 }
 
 // ── Dynamic menu builder ──────────────────────────────────────────────────────
-const MENU_VIDEO_URL = https://files.catbox.moe/hfnyr6.mp4";
+const MENU_VIDEO_URL = "https://files.catbox.moe/hfnyr6.mp4";
 
 function buildMenu(senderName: string, chatJid: string): string {
   const now = new Date();
