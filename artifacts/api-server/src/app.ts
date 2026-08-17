@@ -29,6 +29,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Simple unauthenticated health endpoint for uptime checks (e.g., UptimeRobot, Render)
+app.get("/health", (_req, res) => {
+  res.status(200).send("OK");
+});
+
 app.use("/api", router);
 
 export default app;
